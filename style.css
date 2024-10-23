@@ -34,6 +34,10 @@ button:hover {
   background-color: #155b82;
 }
 
+#workersImg {
+  border-radius: 50%;
+}
+
 h1 {
   text-align: center;
   color: #1f7cad;
@@ -84,7 +88,7 @@ h1 {
 }
 
 #contact {
-  background-color: #155b82;
+  background-color: #008FBB;
   border-radius: 50px;
 }
 
@@ -95,7 +99,7 @@ a {
 }
 
 footer {
-  background-color: #1f7cad;
+  background-color: #0076B7;
   color: #fff;
   padding: 20px;
   text-align: center;
