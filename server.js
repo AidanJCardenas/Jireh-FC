@@ -29,7 +29,7 @@ const messages = [];
 
 // Serve the sign-in page when accessing the root URL
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "signin.html"));
+  res.sendFile(path.join(__dirname, "main", "signin.html"));
 });
 
 // Sign-in endpoint
