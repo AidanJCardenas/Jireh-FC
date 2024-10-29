@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Jireh-FC Log In</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="form">
+        <h2>
+          <img src="Jireh.png" alt="Jireh-FC logo" height="55" id="image" />
+          <br />
+          Login Form
+        </h2>
+        <form id="loginForm">
+          <div class="inputbox">
+            <input
+              type="text"
+              value=""
+              id="username"
+              placeholder="Username"
+              required
+            />
+            <span>Username</span>
+          </div>
+          <div class="inputbox">
+            <input
+              type="password"
+              value=""
+              id="password"
+              placeholder="Password"
+            />
+            <span>Password</span>
+          </div>
+          <input type="submit" value="submit" class="sub" id="submit" />
+        </form>
+        <p id="error-message" style="display: none; color: red"></p>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

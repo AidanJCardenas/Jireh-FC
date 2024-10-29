@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+h1 {
+  color: #333;
+}
+
+#cameraContainer {
+  display: none;
+  position: relative;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#cameraPreview {
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+#messageContainer p {
+  background: #f0f0f0;
+  padding: 8px;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 5px;
+}
+input[type="text"],
+select {
+  padding: 5px;
+  margin: 5px 0;
+}
+button {
+  padding: 6px 10px;
+  margin-top: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}
+#mediaPreview {
+  margin-top: 10px;
+}
+img,
+video {
+  max-width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

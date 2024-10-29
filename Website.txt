@@ -1,0 +1,6 @@
+To Do:
+    Create a Workers Page w/ Sign in
+    Finish Services
+    Make it compatible with all devices
+Ideas:
+    Create a Reviews Page

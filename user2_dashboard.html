@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <h1>User Dashboard</h1>
+    <input type="text" id="messageInput" placeholder="Enter your message" />
+    <input
+      type="file"
+      id="mediaInput"
+      accept="image/*, video/*"
+      onchange="previewMedia()"
+    />
+
+    <!-- New Button to Open Camera -->
+    <button onclick="openCamera()">Open Camera</button>
+    <div id="cameraContainer">
+      <video id="cameraPreview" autoplay></video>
+      <button onclick="capturePhoto()">Capture Photo</button>
+      <button onclick="stopCamera()">Close Camera</button>
+    </div>
+
+    <div id="mediaPreview"></div>
+    <button onclick="sendMessage()">Send</button>
+    <div id="messageContainer"></div>
+    <script src="messaging.js"></script>
+  </body>
+</html>

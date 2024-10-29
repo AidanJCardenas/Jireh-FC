@@ -1,0 +1,56 @@
+// Load messages from localStorage or initialize an empty array
+function loadMessages() {
+  const messages = localStorage.getItem("messages");
+  return messages ? JSON.parse(messages) : [];
+}
+
+// Save messages to localStorage
+function saveMessages(messages) {
+  localStorage.setItem("messages", JSON.stringify(messages));
+}
+
+// Get the messages from localStorage
+const messages = loadMessages();
+
+const username = sessionStorage.getItem("username");
+const role = sessionStorage.getItem("role");
+
+// Display messages based on role
+function displayMessages() {
+  const messageContainer = document.getElementById("messageContainer");
+  messageContainer.innerHTML = "";
+
+  const filteredMessages = messages.filter((message) => {
+    return (
+      role === "admin" || // Admin sees all messages
+      message.receiver === username ||
+      message.sender === username
+    ); // Users see their own messages and admin's messages
+  });
+
+  filteredMessages.forEach((msg) => {
+    const messageElement = document.createElement("p");
+    messageElement.textContent = `${msg.sender}: ${msg.content}`;
+    messageContainer.appendChild(messageElement);
+  });
+}
+
+displayMessages();
+
+function sendMessage() {
+  const messageInput = document.getElementById("messageInput");
+  const content = messageInput.value;
+
+  if (content.trim() !== "") {
+    const newMessage = {
+      sender: username,
+      receiver: role === "admin" ? "user" : "admin", // Admin can send to any user; users send to admin only
+      content: content,
+    };
+
+    messages.push(newMessage); // Add new message to the messages array
+    saveMessages(messages); // Save updated messages to localStorage
+    displayMessages(); // Refresh messages
+    messageInput.value = "";
+  }
+}

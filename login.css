@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(Jireh.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#image {
+  border-radius: 25%;
+}
+
+.box {
+  padding: 20px 30px;
+  width: 325px;
+  height: 410px;
+  backdrop-filter: blur(50px);
+  border-radius: 5px;
+  background: rgba(49, 49, 49, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.box .form {
+  padding: 10px 20px;
+}
+
+.box .form h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.box .form form {
+  margin-top: 50px;
+  align-items: center;
+  /* margin-left: 5px; */
+}
+
+.box .form form .inputbox input {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid #12151e;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.box .form form .inputbox span {
+  position: absolute;
+  transform: translateY(-80px);
+  font-size: 14px;
+  color: #fff;
+}
+
+.box .form form .sub {
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  outline: none;
+  background: #0cc0df;
+  cursor: pointer;
+  font-size: 16px;
+}
